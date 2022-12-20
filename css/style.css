@@ -55,6 +55,8 @@ body {
 .heading {
   color: white;
   text-align: center;
+
+  backface-visibility: hidden;
 }
 
 .heading .primary {
@@ -62,10 +64,46 @@ body {
   font-weight: 400;
   font-size: 60px;
   letter-spacing: 35px;
+
+  animation: slideLeft 1s ease-in-out;
 }
 .heading .sub {
   display: block;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 17.5px;
+
+  animation: slideRight 1s ease-in-out;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  
+  80% {
+    transform: translateX(10px);
+  }
+  
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  
+  80% {
+    transform: translateX(-10px);
+  }
+  
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
 }
