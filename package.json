@@ -1,0 +1,19 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Exciting tours for adventurous people",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asamaiya00/natours.git"
+  },
+  "author": "Animesh Samaiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asamaiya00/natours/issues"
+  },
+  "homepage": "https://github.com/asamaiya00/natours#readme"
+}
