@@ -3,6 +3,7 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 $color-grey: #777;
 $color-white: #fff;
+$color-black: #000;
 
 *,
 *::before,
@@ -43,12 +44,11 @@ body {
   position: absolute;
   top: 6rem;
   left: 6rem;
-}
 
-.logo-container img {
-  height: 3.5rem;
+  img {
+    height: 3.5rem;
+  }
 }
-
 .heading-box {
   position: absolute;
   top: 40%;
@@ -61,23 +61,23 @@ body {
 
   backface-visibility: hidden;
   margin-bottom: 6rem;
-}
 
-.heading .primary {
-  display: block;
-  font-weight: 400;
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
+  .primary {
+    display: block;
+    font-weight: 400;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
 
-  animation: slideLeft 1s ease-in-out;
-}
-.heading .sub {
-  display: block;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 1.75rem;
+    animation: slideLeft 1s ease-in-out;
+  }
+  .sub {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
 
-  animation: slideRight 1s ease-in-out;
+    animation: slideRight 1s ease-in-out;
+  }
 }
 
 @keyframes slideLeft {
@@ -112,35 +112,37 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all 0.2s;
-}
+.btn {
+  &:link,
+  &:visited {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+  }
 
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
 
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
 
-.btn-white {
-  background-color: $color-white;
-  color: $color-grey;
-}
+  &-white {
+    background-color: $color-white;
+    color: $color-grey;
+  }
 
-.btn-animate {
-  animation: slideUp 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
+  &-animate {
+    animation: slideUp 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }
 
 @keyframes slideUp {

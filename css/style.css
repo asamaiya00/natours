@@ -27,9 +27,8 @@ body {
   position: absolute;
   top: 6rem;
   left: 6rem; }
-
-.logo-container img {
-  height: 3.5rem; }
+  .logo-container img {
+    height: 3.5rem; }
 
 .heading-box {
   position: absolute;
@@ -42,20 +41,18 @@ body {
   color: #fff;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
-
-.heading .primary {
-  display: block;
-  font-weight: 400;
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
-  animation: slideLeft 1s ease-in-out; }
-
-.heading .sub {
-  display: block;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 1.75rem;
-  animation: slideRight 1s ease-in-out; }
+  .heading .primary {
+    display: block;
+    font-weight: 400;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    animation: slideLeft 1s ease-in-out; }
+  .heading .sub {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
+    animation: slideRight 1s ease-in-out; }
 
 @keyframes slideLeft {
   0% {
@@ -77,8 +74,7 @@ body {
     transform: translate(0);
     opacity: 1; } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
