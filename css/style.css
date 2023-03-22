@@ -114,6 +114,19 @@ body {
 .mt-lg {
   margin-top: 8rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  opacity: 0.15; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .btn:link, .btn:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -296,7 +309,7 @@ body {
     transform: scale(1.05) translateY(-1.5rem); }
 
 .story {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 6rem;
   padding-left: 9rem;
   width: 60%;
@@ -403,5 +416,5 @@ body {
   margin-top: -25vh; }
 
 .section-stories {
-  background-color: #f7f7f7;
+  position: relative;
   padding: 15rem 0; }
