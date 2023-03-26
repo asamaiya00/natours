@@ -127,20 +127,23 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -304,7 +307,8 @@ body {
   border-bottom: 3px solid transparent;
   font-family: inherit;
   color: inherit;
-  background-color: rgba(255, 255, 255, 0.5); }
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s; }
   .form__input:focus {
     outline: none;
     border-bottom: 3px solid #7ed56f;
@@ -317,15 +321,53 @@ body {
 .form__label {
   display: block;
   margin-left: 2rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   font-size: 1.4rem;
   font-weight: 700;
-  transition: all .5s; }
+  transition: all 0.5s; }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
+
+.form__radio-group {
+  font-size: 1.6rem;
+  display: inline-block;
+  width: 49%; }
+
+.form__radio-label {
+  padding-left: 3rem;
+  position: relative;
+  cursor: pointer; }
+
+.form__radio-button {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 0.5rem solid #7ed56f;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.7rem; }
+  .form__radio-button::after {
+    content: "";
+    position: absolute;
+    width: 1.3rem;
+    height: 1.3rem;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #7ed56f;
+    opacity: 0; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
